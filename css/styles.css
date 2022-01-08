@@ -54,25 +54,20 @@ img {
 }
 
 .container-nav {
-  display: flex;
-  flex-direction: row;
-  margin-left: 93px;
+  width: 294px;
   margin-top: 32px;
-  margin-bottom: 32px;
 }
 
 .container-contact {
-  display: flex;
-  flex-direction: row;
   margin-left: auto;
   margin-top: 32px;
-  margin-bottom: 32px;
 }
 
 /* logo */
 .logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  margin-top: 24px;
+  margin-bottom: 25px;
+  margin-right: 93px;
 }
 
 .logo,
@@ -82,8 +77,10 @@ img {
   line-height: 1.2;
   line-height: 100%;
   letter-spacing: 0.03em;
+  width: 145px;
   color: var(--color-of-headers);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 span {
@@ -96,12 +93,34 @@ span {
   display: flex;
 }
 
+.site-nav {
+  justify-content: space-between;
+}
+
 .site-nav a {
   color: var(--color-of-headers);
 }
 
-.site-nav a {
-  margin-left: 50px;
+.box-nav {
+  position: relative;
+  height: 48px;
+}
+
+.navigation::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+  opacity: 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigation:hover::after {
+  opacity: 1;
 }
 
 .site-nav a,
@@ -115,6 +134,7 @@ span {
 
 /* contact */
 .contact a {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--text-color);
 }
 
@@ -126,7 +146,8 @@ span {
   margin-right: 50px;
 }
 
-.contact-item a:hover {
+.contact-item a:hover,
+.contact-item a:focus {
   fill: var(--accent-color);
 }
 
@@ -145,6 +166,7 @@ span {
   fill: #757575;
   margin-right: 10px;
   cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail-icon:hover,
@@ -395,12 +417,14 @@ span {
   height: 44px;
   border-radius: 50%;
   cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .links:hover,
@@ -443,12 +467,14 @@ span {
   background-color: #ffffff;
   width: 170px;
   height: 92px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .label {
   fill: #afb1b8;
   width: 106px;
   height: 60px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
@@ -515,12 +541,14 @@ span {
   border-radius: 50%;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link {
   width: 20px;
   height: 20px;
   fill: #ffffff;
+  transition-timing-function: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-links:hover,
@@ -539,6 +567,7 @@ span {
   display: inline-block;
   color: #ffffff;
   margin-bottom: 20px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-list > a {
@@ -557,19 +586,14 @@ span {
 
 .logo:hover,
 .logo:focus,
-.logo:active,
 .footer-logo:focus,
 .footer-logo:hover,
-.footer-logo:active,
 .site-nav a:hover,
 .site-nav a:focus,
-.site-nav a:active,
 .contact a:hover,
 .contact a:focus,
-.contact :active,
 .contact-list a:hover,
-.contact-list a:focus,
-.contact-list:active {
+.contact-list a:focus {
   color: var(--accent-color);
 }
 
@@ -614,11 +638,11 @@ span {
   border-radius: 4px;
   box-shadow: none;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter:hover,
-.filter:focus,
-.filter:active {
+.filter:focus {
   color: #ffffff;
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -642,6 +666,7 @@ span {
 .card-item > a {
   display: block;
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-item > a:hover {
@@ -651,20 +676,8 @@ span {
 
 .card-thumb {
   position: relative;
+  overflow: hidden;
 }
-
-/* .card-thumb::before {
-  display: flex;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
-  transition: cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0; 
-} */
 
 .overlay {
   display: flex;
@@ -675,8 +688,9 @@ span {
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
-  opacity: 0;
-  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
 }
 
 .thumb-text {
@@ -688,9 +702,12 @@ span {
   line-height: 28px;
   letter-spacing: 0.03em;
   color: #ffffff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.overlay:hover {
+.card-link:hover .overlay {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(-0%);
   opacity: 1;
 }
 
