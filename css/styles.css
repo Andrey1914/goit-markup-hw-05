@@ -728,7 +728,7 @@ span {
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
   opacity: 0;
-  transition: opacity 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function);
 }
 
 .thumb-text {
@@ -745,7 +745,7 @@ span {
 
 .card-link:hover .overlay,
 .card-link:focus .overlay {
-  transform: translateY(0%);
+  transform: translateY(-0%);
   opacity: 1;
 }
 
