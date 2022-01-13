@@ -41,6 +41,15 @@ a {
   text-decoration: none;
 }
 
+span {
+  color: var(--logo-color);
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+}
+
 /* header */
 
 .header {
@@ -87,10 +96,6 @@ a {
   width: 145px;
   color: var(--color-of-headers);
   transition: color 250ms var(--timing-function);
-}
-
-span {
-  color: var(--logo-color);
 }
 
 /* navigation */
@@ -266,7 +271,8 @@ span {
   top: 50%;
   width: 528px;
   height: 581px;
-  padding: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
   background: #ffffff;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -470,7 +476,8 @@ span {
 }
 
 .links:hover,
-.links:focus .social-link-icon:hover,
+.links:focus,
+.social-link-icon:hover,
 .social-link-icon:focus {
   background-color: var(--accent-color);
 }
