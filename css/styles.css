@@ -37,8 +37,13 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* header */
-.page-header {
+
+.header {
   border-bottom: 1px solid #ececec;
 }
 
@@ -65,6 +70,7 @@ img {
 }
 
 /* logo */
+
 .logo {
   margin-top: 24px;
   margin-bottom: 25px;
@@ -80,7 +86,6 @@ img {
   letter-spacing: 0.03em;
   width: 145px;
   color: var(--color-of-headers);
-  text-decoration: none;
   transition: color 250ms var(--timing-function);
 }
 
@@ -89,6 +94,7 @@ span {
 }
 
 /* navigation */
+
 .site-nav,
 .contact {
   display: flex;
@@ -131,20 +137,16 @@ span {
   font-size: 14px;
   line-height: 100%;
   letter-spacing: 0.02em;
-  text-decoration: none;
 }
 
 /* contact */
+
 .contact {
   flex-wrap: wrap;
 }
 
 .contact > li:first-child {
   margin-right: 50px;
-}
-
-.contact a {
-  color: var(--text-color);
 }
 
 .link-mail:hover,
@@ -156,6 +158,7 @@ span {
 
 .link-mail,
 .link-tel {
+  color: var(--text-color);
   transition: color 250ms var(--timing-function);
 }
 
@@ -190,6 +193,7 @@ span {
 .link-tel:focus .phone-icon {
   fill: var(--accent-color);
 }
+
 /* hero */
 
 .section,
@@ -218,7 +222,7 @@ span {
   color: #ffffff;
 }
 
-.button {
+.btn-hero {
   display: block;
   margin-top: 30px;
   margin-left: auto;
@@ -271,7 +275,7 @@ span {
   transition: transform 250ms var(--timing-function);
 }
 
-.button-close {
+.btn-close {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -290,6 +294,7 @@ span {
 }
 
 /* experience */
+
 .experience-list {
   display: flex;
   justify-content: space-between;
@@ -297,11 +302,11 @@ span {
   flex-basis: calc(100% / 4);
 }
 
-.experience-list > li {
+.experience-item {
   width: 270px;
 }
 
-.icons-place {
+.experience-icons-place {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -334,6 +339,7 @@ span {
 }
 
 /* activity */
+
 .section-activity {
   padding-bottom: 94px;
 }
@@ -386,6 +392,7 @@ span {
 }
 
 /* our team */
+
 .section-team {
   background: #f5f4fa;
 }
@@ -401,7 +408,7 @@ span {
   margin-left: 30px;
 }
 
-.team-text {
+.container-team {
   padding-top: 30px;
   padding-bottom: 30px;
   background: #ffffff;
@@ -455,7 +462,7 @@ span {
   transition: background-color 250ms var(--timing-function);
 }
 
-.social-link {
+.social-link-icon {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
@@ -463,17 +470,18 @@ span {
 }
 
 .links:hover,
-.links:focus .social-link:hover,
-.social-link:focus {
+.links:focus .social-link-icon:hover,
+.social-link-icon:focus {
   background-color: var(--accent-color);
 }
 
-.links:hover .social-link,
-.links:focus .social-link {
+.links:hover .social-link-icon,
+.links:focus .social-link-icon {
   fill: #ffffff;
 }
 
 /* clients */
+
 .clients {
   text-align: center;
   margin-bottom: 50px;
@@ -523,7 +531,8 @@ span {
 }
 
 /* footer */
-.page-footer {
+
+.footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--footer-color);
@@ -586,9 +595,7 @@ span {
 }
 
 .footer-links:hover,
-.footer-links:focus,
-.footer-link:hover,
-.footer-link:focus {
+.footer-links:focus {
   background-color: var(--accent-color);
 }
 
@@ -621,8 +628,8 @@ span {
 .logo:focus,
 .footer-logo:focus,
 .footer-logo:hover,
-.site-nav a:hover,
-.site-nav a:focus,
+.navigation:hover,
+.navigation:focus,
 .contact a:hover,
 .contact a:focus,
 .contact-list a:hover,
